@@ -13,7 +13,7 @@ COPY src ./src
 RUN set -x && cargo build --release
 
 # Create a minimal docker image 
-FROM debian:12-slim as runtime-stage
+FROM debian:13-slim as runtime-stage
 
 RUN apt-get -y update && \
     apt-get install -y \
